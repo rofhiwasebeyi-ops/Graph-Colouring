@@ -72,7 +72,7 @@ class ACOColourer:
 
         return colouring
 
-    def run_for_k(self, k, track_history=False):
+    def run_for_k(self, k, track_history=True):
         pheromone = np.ones((self.g.n, k))
         history = []
         best_colouring, best_conflicts = None, np.inf
@@ -105,7 +105,7 @@ class ACOColourer:
 
         return best_colouring, int(best_conflicts), history
 
-    def find_minimum_colouring(self, k_start, k_min=1, track_history=False):
+    def find_minimum_colouring(self, k_start, k_min=1, track_history=True):
         start = time.perf_counter()
         best_colouring, best_k = None, None
         all_history = {}

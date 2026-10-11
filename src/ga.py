@@ -87,7 +87,7 @@ class GAColourer:
 
     # ---------- public API ----------
 
-    def run_for_k(self, k, track_history=False):
+    def run_for_k(self, k, track_history=True):
         """Run the GA targeting a k-colouring. Returns best colouring, conflicts, history."""
         population = self._init_population(k)
         history = []
@@ -121,7 +121,7 @@ class GAColourer:
 
         return best_individual, int(best_fit), history
 
-    def find_minimum_colouring(self, k_start, k_min=1, track_history=False):
+    def find_minimum_colouring(self, k_start, k_min=1, track_history=True):
         """
         Decrement k from k_start, keeping the best valid (0-conflict) result.
         Stops as soon as a k fails to reach 0 conflicts within the budget.
