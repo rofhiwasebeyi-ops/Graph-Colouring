@@ -1,0 +1,10 @@
+{
+  "GA": {
+    "population_size": 100,
+    "mutation_rate": 0.05
+  },
+  "ACO": {
+    "n_ants": 45,
+    "beta": 3.0
+  }
+}

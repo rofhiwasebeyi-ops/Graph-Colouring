@@ -1,0 +1,3 @@
+algorithm,parameters,success_rate,mean_convergence
+GA,"population_size=100, mutation_rate=0.05",1.0,15.5
+ACO,"n_ants=45, beta=3.0",1.0,29.333333333333332
