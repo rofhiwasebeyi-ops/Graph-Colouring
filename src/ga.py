@@ -46,7 +46,7 @@ class GAColourer:
         return self.rng.integers(0, k, size=(self.pop_size, self.g.n))
 
     def _fitness(self, population):
-        """Vectorised conflict count for a whole population. Lower is better."""
+        """Vectorised conflict count for a whole population."""
         edges = np.array(list(self.g.edges))
         if len(edges) == 0:
             return np.zeros(len(population), dtype=int)
